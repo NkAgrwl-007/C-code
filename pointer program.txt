@@ -1,0 +1,73 @@
+Q1 write a c program to create,initialise and use pointer?
+ans #include <stdio.h>
+
+int main()
+{
+    int n=10;
+    int *ptr= &n;
+    printf("the value of n is %d \n",n);
+    printf("the address of the n is %d \n",&n);
+    printf("the address of n by using pointer %d \n",ptr);
+    printf("the address of the pointer is %d \n",&ptr);
+    printf("the value of n using pointer is %d \n",*ptr);
+
+//After changing the value of n 
+    n=50;
+    printf("the value of n is %d \n",n);
+    printf("the value of n using pointer %d \n",*ptr);
+    
+//After changing value of n by pointer
+    *ptr=100;
+    printf("the value of n is %d \n",n);
+    printf("the value of n usinmg pointer is %d",*ptr);
+    
+}
+Q2 write a c program to add two no. using pointer?
+ANS #include <stdio.h>
+int main()
+{
+    int *ptr1,*ptr2;
+    int num;
+    printf(" enter two numbers");
+    scanf("%d %d",ptr1,ptr2);
+    num = *ptr1 + *ptr2;
+    printf(" the sum is %d",num);
+}
+Q3 Write a c program to swap two no. using pointer?
+ANS #include <stdio.h>
+
+int main()
+{ int x,y,*a,*b,temp_var;
+    printf("enter the value of x and y \n");
+    scanf("%d %d",&x,&y);
+    printf("%d \n %d \n",x,y);
+    a=&x;
+    b=&y;
+    temp_var=*a;
+    *a=*b;
+    *b=temp_var;
+    printf(" after swapping the no.\n");
+    printf("%d\n%d",x,y);
+
+}
+Q4 Write a C program to input and print array element using pointer?
+ans #include <stdio.h>
+
+int main()
+{ int arr[4];
+  int *ptr=arr;
+  
+  for(int i=0;i<4;i++)
+  {
+      scanf("%d",ptr);
+      ptr++;
+  }
+  ptr=arr;
+  for(int i=0;i<4;i++)
+  {
+      printf("%d ",*ptr);
+      ptr++;
+  }
+
+
+}

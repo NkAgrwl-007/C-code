@@ -1,0 +1,265 @@
+Q1 WAP TO PRINT CUBE OF A NUMBER USING FUNCTION?
+ANS #include <stdio.h>
+int cube(int);
+
+int main()
+{
+   int n,s;
+   scanf("%d",&n);
+   s=cube(n);
+   printf("%d",s);
+}
+int cube(int n)
+{
+    int k;
+    k=n*n*n;
+    return(k);
+}
+Q2 WAP TO PRINT PERI,AREA AND DIAMETER OF A CIRCLE?
+ANS #include <stdio.h>
+float perimeter(float);
+float area_(float);
+float diameter(float);
+
+
+int main()
+{
+   float peri,area,dia;
+   float r;
+   scanf("%f",&r);
+   peri=perimeter(r);
+   area=area_(r);
+   dia=diameter(r);
+   printf("%f\n%f\n%f",peri,area,dia);
+}
+float perimeter(float r)
+{
+    float k;
+    k=2*3.14*r;
+    return(k);
+}
+float area_(float r)
+{
+    float l;
+    l=3.14*r*r;
+    return(l);
+}
+float diameter(float r)
+{
+    float m;
+    m=2*r;
+    return(m);
+}
+Q3 Wap to print max and min between two no.?
+ans #include <stdio.h>
+int max(int,int);
+int min(int,int);
+
+int main()
+{
+   int a,b,c,d;
+   scanf("%d %d",&a,&b);
+   c=max(a,b);
+   d=min(a,b);
+   printf("%d %d",c,d);
+}
+int max(int a, int b)
+{
+    int k;
+    if(a>b)
+    {
+        k=a;
+    }
+    else
+    {
+        k=b;
+    }
+    return(k);
+}
+int min(int a, int b)
+{
+    int l;
+    if(a>b)
+    {
+        l=b;
+    }
+    else
+    {
+        l=a;
+    }
+    return(l);
+}
+Q4 WAP TO PRINT EVEN AND ODD NO. USING FUNCTION?
+ANS #include <stdio.h>
+int even(int);
+int odd(int);
+
+int main()
+{
+   int a,c,d;
+   scanf("%d",&a);
+   c=even(a);
+   d=odd(a);
+   
+}
+int even(int a)
+{
+    int k;
+    if(a%2==0)
+    {
+        printf("even no = %d",a);
+    }
+
+}
+int odd(int a)
+{
+    int l;
+    if(a%2!=0)
+    {
+        printf("odd no = %d",a);
+    }
+    
+   
+}
+Q5 WAP TO PRINT PRIME,ARMSTRONG,PERFECTNO. USING FUNCTION?
+#include <stdio.h>
+#include <math.h>
+int prime(int);
+int armstrong(int);
+int perfect(int);
+
+int main()
+{
+    int n,c,d,e;
+    scanf("%d",&n);
+    c=prime(n);
+    d=armstrong(n);
+    e=perfect(n);
+    
+}
+int prime(int n)
+{
+    int flag=0;
+    for(int i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            flag=1;
+        }
+    }
+    if(flag=0)
+    printf("prime no.= %d",n);
+    else
+    printf("no. is not prime");
+}
+int armstrong(int n)
+{
+    int r=0,count=0,t=0,a=n;
+    while(n>0)
+    {
+        n=n/10;
+        count++;
+    }
+    while(n>0)
+    {
+        r=n%10;
+        n=n/10;
+        t= t+pow(r,count);
+    }
+    if(t==k)
+    printf("armstrong no.=%d",t);
+    else
+    printf("not a armstrong no.");
+}
+int perfect(int n)
+{
+    int sum=0;
+    for(int i=0;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            sum=sum+i;
+        }
+        if(sum==n)
+        printf("no. is perfect=%d",n);
+        else
+        printf("no. is not perfect");
+    }
+}
+
+Q6 WAP TO PRINT ALL PRIME NO. BETWEEN 1 TO N USING FUNCTION?
+ANS 
+#include <stdio.h>
+int prime(int);
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    prime(n);
+}
+int prime(int n)
+{
+    
+    for(int i=2;i<=n;i++)
+    {
+        int flag=0;
+        for(int j=2;j<=i/2;j++)
+        {
+            if(i%j==0)
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0)
+        {
+            printf("%d ",i);
+            
+        }
+    }
+    
+}
+Q7 WAP to print all nautral no. between given range using function?
+ans 
+#include <stdio.h>
+int natural(int);
+
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    natural(n);
+}
+int natural(int n)
+{
+    for(int i=1;i<=n;i++)
+    {
+        printf("%d ",i);
+    }
+}
+
+Q8 WAP TO PRINT POWER OF A NO. USING FUNCTION?
+ANS 
+#include <stdio.h>
+int power(int,int);
+int main()
+{
+    int n1,n2;
+    scanf("%d",&n1);
+    scanf("%d",&n2);
+    power(n1,n2);
+}
+int power(int n1, int n2)
+{
+    int p=1;
+    for(int i=1;i<=n2;i++)
+    {
+        p*=n1;
+    }
+    printf("%d",p);
+}
+
+
+
+
